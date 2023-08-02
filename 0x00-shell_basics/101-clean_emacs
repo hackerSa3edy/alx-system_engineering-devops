@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -regex '.*~$' -exec rm '{}' \;
+find . -type f -regex '.*~$' | xargs -I {} rm {}
