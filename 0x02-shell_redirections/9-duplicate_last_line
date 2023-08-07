@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/hosts <( tail -n 1 /etc/hosts)
+cat iacta <( tail -n 1 iacta)
