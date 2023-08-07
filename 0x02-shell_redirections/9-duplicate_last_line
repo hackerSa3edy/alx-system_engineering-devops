@@ -1,2 +1,2 @@
 #!/bin/bash
-echo tested
+cat /etc/hosts ; tail -n 1 /etc/hosts
