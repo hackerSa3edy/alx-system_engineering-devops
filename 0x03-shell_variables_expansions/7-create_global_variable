@@ -1,2 +1,2 @@
 #!/bin/bash
-set environment BEST="School"
+env BEST="School"
