@@ -1,2 +1,2 @@
 #!/bin/bash
-SUM=0; for path in `printenv PATH | tr ":" "\n"`; do SUM=$((SUM + 1)); done; echo $SUM
+printenv PATH | tr ':' '\n' | uniq -u | wc -l
