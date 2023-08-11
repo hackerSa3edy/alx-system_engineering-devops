@@ -5,7 +5,10 @@
 ### Bash Script Explanation
 
 The following bash script showcases a series of operations that involve character manipulation, number conversion, and arithmetic calculations. Environment variables are utilized to achieve the desired outcome.
-
+- We used here the numbers from 0-4 and 0-7 because the task specified that:
+    - `WATER` is in base `water`, which is in base `5` because the `water` is `5` letters word.
+    - `STIR` is in base `stir.`, which is in base `5` also.
+    - The result should be in base `bestchol`, which is in base `8`.
 ```bash
 export STIR="ti.itirtrtr"
 export WATER="ewwatratewa"
