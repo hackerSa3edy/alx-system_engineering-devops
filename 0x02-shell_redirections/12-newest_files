@@ -1,0 +1,2 @@
+#!/bin/bash
+ls --sort=t -1 | head -n 10
