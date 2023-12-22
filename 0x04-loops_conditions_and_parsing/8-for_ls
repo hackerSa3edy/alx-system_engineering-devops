@@ -3,6 +3,6 @@
 #+ in a list format and where only the part of the name
 #+ after the first dash is displayed
 
-for file in $( ls | cut -d '-' -f 2- ); do
+for file in $( find . -maxdepth 1 -exec basename {} \; | sed -e 1d | cut -d '-' -f 2- ); do
 	echo "$file"
 done
