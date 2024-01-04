@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Open a socket on poort 98 on localhost
+
+nc -s localhost -lp 98
