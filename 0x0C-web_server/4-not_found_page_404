@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Install nginx, configure it and create a redirect and error page
+
+apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.*
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+
+REDIR_CONF="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
+REDIR_CONF+="\n\terror_page 404 /custom_404.html;"
+REDIR_CONF+="\n\tlocation = /custom_404.html {\n\t\troot /var/www/html/;\n\t\tinternal;\n\t}"
+
+sed -i "53i\ $REDIR_CONF" /etc/nginx/sites-enabled/default
+
+service nginx restart
