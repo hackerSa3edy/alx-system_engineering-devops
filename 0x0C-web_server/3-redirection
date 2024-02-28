@@ -6,6 +6,6 @@ echo "Hello World!" > /var/www/html/index.*
 
 REDIR_CONF="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}"
 
-sed -i "53i\ $REDIR_CONF" /etc/nginx/site-enabled/default
+sed -i "53i\ $REDIR_CONF" /etc/nginx/sites-enabled/default
 
 service nginx restart
