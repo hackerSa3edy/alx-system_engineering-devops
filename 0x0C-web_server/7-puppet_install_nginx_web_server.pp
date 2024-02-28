@@ -22,3 +22,8 @@ exec { 'redirect_path':
   path    => '/usr/bin',
   require => Package['nginx'],
 }
+
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
+}
