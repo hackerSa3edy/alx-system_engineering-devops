@@ -2,7 +2,7 @@
 # perform a 301 redirect when querying /redirect_me.
 
 package { 'nginx':
-  ensure   => present,
+  ensure   => latest,
   provider => apt,
 }
 
