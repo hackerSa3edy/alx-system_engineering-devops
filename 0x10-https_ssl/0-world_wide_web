@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Display information about subdomains.
+
+
+if [[ "$#" == 2 ]]; then
+	subdomains=("$2")
+elif [[ "$#" == 1 ]]; then
+	subdomains=('www' 'lb-01' 'web-01' 'web-02')
+else
+	exit
+fi
+
+domainInfo () {
+	domain=$1
+	subdomain=$2
+
+    # shellcheck disable=SC2086
+	output=$(dig ${subdomain}.${domain} a | grep -A1 'ANSWER SECTION:')
+
+    # echo "$output"
+    # output example
+    # www.holberton.online.   87  IN  A   54.210.47.110
+    # After using awk:
+    # echo "The subdomain $subdomain is a $record_type record and points to $ip_address"
+    # The subdomain www is a A record and points to 54.210.47.110
+
+    record_type=$(echo "$output" | awk '{printf $4}')
+    ip_address=$(echo "$output" | awk '{printf $5}')
+
+    echo "The subdomain $subdomain is a $record_type record and points to $ip_address"
+}
+
+for subdomain in "${subdomains[@]}"; do
+    domainInfo "$1" "$subdomain"
+done
