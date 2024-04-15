@@ -4,11 +4,11 @@
 # 443 (HTTPS SSL)
 # 80 (HTTP)
 
-apt-get install ufw -y
-ufw enable
+sudo apt-get install ufw -y
+sudo ufw enable
 
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow in ssh
-ufw allow in http
-ufw allow in https
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
