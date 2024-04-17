@@ -3,5 +3,5 @@
 
 passwd="$1"
 
-mysqldump -u root -p "${passwd}" --all-databases -r backup.sql && \
+mysqldump -u root -p "${passwd}" --all-databases -r backup.sql
 tar -czvf "$(date +'%d-%m-%Y').tar.gz" backup.sql
