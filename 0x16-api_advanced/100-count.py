@@ -20,6 +20,7 @@ import requests
 
 static_counter = {}
 
+
 def count_words(subreddit, word_list, after='', count=0):
     """
     This function retrieves all hot posts for a given subreddit and counts the
@@ -70,17 +71,25 @@ def count_words(subreddit, word_list, after='', count=0):
                 r'\b' + re.escape(title) + r'\b',
                 post.get('data', {}).get('title', ''),
                 re.IGNORECASE
-                ):
+            ):
 
-                static_counter.update({title.lower(): static_counter[title.lower()] + 1})
+                static_counter.update(
+                    {
+                        title.lower(): static_counter[title.lower()] + 1
+                        }
+                    )
 
     after = jsonResp.get('data', {}).get('after', None)
     count += jsonResp.get('data', {}).get('dist', 0)
 
     if not after:
-        results = dict(sorted(static_counter.items(), key=lambda item: (-item[1], item[0])))
+        results = dict(sorted(
+            static_counter.items(),
+            key=lambda item: (-item[1], item[0])
+            ))
         [
-            print(f'{key}:', value) for key, value in results.items() if value > 0
+            print(f'{key}:', value)
+            for key, value in results.items() if value > 0
         ]
         return results
     else:
