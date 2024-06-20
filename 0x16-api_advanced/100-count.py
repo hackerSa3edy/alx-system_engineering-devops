@@ -72,7 +72,7 @@ def count_words(subreddit, word_list, after='', count=0):
                 re.IGNORECASE
                 ):
 
-                static_counter.update({title: static_counter[title] + 1})
+                static_counter.update({title.lower(): static_counter[title.lower()] + 1})
 
     after = jsonResp.get('data', {}).get('after', None)
     count += jsonResp.get('data', {}).get('dist', 0)
