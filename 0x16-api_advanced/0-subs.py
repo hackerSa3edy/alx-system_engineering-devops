@@ -10,14 +10,6 @@ The function sends a GET request to the Reddit API and parses the JSON
 response to extract the number of subscribers. It handles potential errors
 such as non-200 status codes and JSON decoding errors, returning 0 in
 these cases.
-
-This module can be used as a standalone script or its function can be
-imported into other Python programs.
-
-Example:
-    >>> from 0-subs import number_of_subscribers
-    >>> print(number_of_subscribers('python'))
-    2345678
 """
 import requests
 
@@ -55,6 +47,5 @@ def number_of_subscribers(subreddit):
     except requests.exceptions.JSONDecodeError:
         return 0
 
-    subscribers = jsonResp.get('data', None)
-    if subscribers is not None:
-        return subscribers.get('subscribers', None)
+    subscribers = jsonResp.get('data', {}).get('subscribers', 0)
+    return subscribers
