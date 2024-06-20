@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """
-0-subs.py
----------
-
 This module contains a function `number_of_subscribers` that retrieves the
 number of subscribers for a given subreddit from the Reddit API.
 

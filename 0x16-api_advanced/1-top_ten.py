@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """
-1-top_ten.py
-------------
-
 This module contains a function `top_ten` that retrieves the top ten hot posts
 for a given subreddit from the Reddit API.
 
