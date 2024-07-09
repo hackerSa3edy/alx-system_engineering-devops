@@ -4,7 +4,7 @@
 graceful_reload() {
     if pgrep -x gunicorn &> /dev/null; then
         PID="$(pgrep -x gunicorn -o)"
-        kill -HUP "$PID"
+        kill -HUP "$PID" &> /dev/null
     fi
 }
 
