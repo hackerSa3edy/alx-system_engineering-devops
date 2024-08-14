@@ -44,3 +44,5 @@ Before our project discussion, we discovered a critical issue: a new feature's U
 3. **Pre-Deployment Checks:** Implement automated pre-deployment checks to ensure that all URLs and routes point to the correct environment.
 4. **CI/CD Pipeline Enhancement:** Add a step in the CI/CD pipeline to validate environment-specific configurations before deployment.
 5. **Documentation:** Update project documentation to highlight the importance of environment-specific testing and configuration management.
+
+###### The original [post](https://docs.google.com/document/d/1By4yQN-_j6Wvjm8B7OHzlWDLec4eELt_q1ydaIp7QMM/edit?usp=sharing "The Unexpected Turn: A Graduation Project Postmortem").
