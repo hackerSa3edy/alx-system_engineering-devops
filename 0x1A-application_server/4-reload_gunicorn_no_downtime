@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
 # Function to gracefully reload Gunicorn
 
-graceful_reload() {
-    if pgrep -x gunicorn &> /dev/null; then
-        PID="$(pgrep -x gunicorn -o)"
-        kill -HUP "$PID" &> /dev/null
-    fi
-}
-
-# Run the graceful reload function
-graceful_reload
+pgrep gunicorn | xargs kill -HUP
