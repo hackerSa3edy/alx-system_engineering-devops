@@ -1,30 +1,45 @@
 # Project: 0x10. HTTPS SSL
 
+## Description
+
+This directory contains a series of tasks that demonstrate the implementation and management of HTTPS and SSL in web servers. HTTPS (HyperText Transfer Protocol Secure) is an extension of HTTP that uses SSL/TLS to encrypt data between the client and server, ensuring secure communication. These tasks are designed to help users understand the importance of HTTPS, how to set it up, and how to manage SSL termination.
+
+## Table of Contents
+
+- [Resources](#resources)
+- [Learning Objectives](#learning-objectives)
+- [Tasks](#tasks)
+- [Certbot Commands Log](#certbot-commands-log)
+- [Additional Notes](#additional-notes)
+
 ## Resources
 
-#### Read or watch:
+### Read or watch
 
-* [What is HTTPS?](https://intranet.alxswe.com/rltoken/XT1BAiBL3Jpq1bn1q6IYXQ)
-* [What are the 2 main elements that SSL is providing](https://intranet.alxswe.com/rltoken/STj5WkAPACBxOvwB77Ycrw)
-* [HAProxy SSL termination on Ubuntu16.04](https://intranet.alxswe.com/rltoken/asrMHTWJxWQ2x-Sn6snHow)
-* [SSL termination](https://intranet.alxswe.com/rltoken/CKUICfppIWI6UC0coEMB8g)
-* [Bash function](https://intranet.alxswe.com/rltoken/zPjZ7-eSSQsLFsGA16C1HQ)
+- [What is HTTPS?](https://www.cloudflare.com/learning/ssl/what-is-https/)
+- [What are the 2 main elements that SSL is providing](https://www.instantssl.com/ssl-certificate-products/ssl.html)
+- [HAProxy SSL termination on Ubuntu16.04](https://www.haproxy.com/blog/haproxy-ssl-termination/)
+- [SSL termination](https://www.nginx.com/resources/glossary/ssl-termination/)
+- [Bash function](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html)
+
 ## Learning Objectives
 
 ### General
 
-* What is HTTPS SSL 2 main roles
-* What is the purpose encrypting traffic
-* What SSL termination means
+- Understand the two main roles of HTTPS SSL
+- Learn the purpose of encrypting traffic
+- Understand what SSL termination means
+
 ## Tasks
 
-| Task | File |
-| ---- | ---- |
-| 0. World wide web | [0-world_wide_web](./0-world_wide_web) |
-| 1. HAproxy SSL termination | [1-haproxy_ssl_termination](./1-haproxy_ssl_termination) |
-| 2. No loophole in your website traffic | [100-redirect_http_to_https](./100-redirect_http_to_https) |
+| Task                                   | Description                                                                                                       | File                                                       |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| 0. World wide web                      | Configure your domain zone so that the subdomain `www` points to your load-balancer IP (LB)                       | [0-world_wide_web](./0-world_wide_web)                     |
+| 1. HAproxy SSL termination             | Create a certificate using `certbot` and configure `HAproxy` to accept encrypted traffic for your subdomain `www` | [1-haproxy_ssl_termination](./1-haproxy_ssl_termination)   |
+| 2. No loophole in your website traffic | Configure HAproxy to automatically redirect HTTP traffic to HTTPS                                                 | [100-redirect_http_to_https](./100-redirect_http_to_https) |
 
-### Certbot Commands Log
+## Certbot Commands Log
+
 ```bash
 sudo apt update
 sudo apt install snapd
@@ -37,3 +52,9 @@ DOMAIN='example.com' sudo -E bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchai
 sudo chmod -R go-rwx /etc/haproxy/certs
 sudo nano /etc/haproxy/haproxy.cfg
 ```
+
+## Additional Notes
+
+- Ensure you have the necessary permissions to execute the commands.
+- Test the configuration in a safe environment to avoid any unintended disruptions to your web services.
+- Refer to the resources provided for a deeper understanding of each concept and its practical applications.

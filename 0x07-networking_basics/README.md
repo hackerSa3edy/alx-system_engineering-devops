@@ -1,37 +1,61 @@
-# Project: 0x07. Networking basics #0
+# Project: 0x07. Networking Basics #0
+
+## Description
+
+This directory contains a series of scripts that demonstrate fundamental networking concepts and operations. These scripts are designed to help users understand and practice basic networking tasks, including understanding the OSI model, different types of networks, IP addressing, and common networking protocols.
+
+## Table of Contents
+
+- [Resources](#resources)
+- [Learning Objectives](#learning-objectives)
+- [Tasks](#tasks)
+- [Additional Notes](#additional-notes)
 
 ## Resources
 
-#### Read or watch:
+### Read or watch
 
-* [OSI model](https://intranet.alxswe.com/rltoken/k2uCsynicuNbu1cAQhXqVQ)
-* [Different types of network](https://intranet.alxswe.com/rltoken/XW3ZGm5Ya_a8XVDXcAKT_A)
-* [LAN network](https://intranet.alxswe.com/rltoken/en370-Hrwgi_GUvFcg3bKg)
-* [WAN network](https://intranet.alxswe.com/rltoken/Ah1EKqnINR85lM4P2WnLSw)
-* [Internet](https://intranet.alxswe.com/rltoken/Lwh9xQxFD4dWh5sIApXI1g)
-* [MAC address](https://intranet.alxswe.com/rltoken/j-Wp-YRvFTVP04SpIeRzHQ)
-* [What is an IP address](https://intranet.alxswe.com/rltoken/HaZZvrmGaQ3U7ZLDYgZb6w)
-* [Private and public address](https://intranet.alxswe.com/rltoken/OPJCZYuWSEXLIZOqU9Uc0A)
-* [IPv4 and IPv6](https://intranet.alxswe.com/rltoken/M8g-egWLlldTl6Y0QECdwA)
-* [Localhost](https://intranet.alxswe.com/rltoken/7lj-zoZQ7xFTkj4MTyos_g)
-* [TCP and UDP](https://intranet.alxswe.com/rltoken/uJbs8E9-FyATfsELpmtTIg)
-* [TCP/UDP ports List](https://intranet.alxswe.com/rltoken/4PYkqDfOvIZZb9aUPGOOzQ)
-* [What is ping /ICMP](https://intranet.alxswe.com/rltoken/3zBgO6r2M1Q8lUVt9g8aJw)
-* [Positional parameters](https://intranet.alxswe.com/rltoken/U5CMxsErz85edWap3fNEoQ)
+- [OSI Model Explained](https://www.imperva.com/learn/application-security/osi-model/)
+- [Different Types of Networks](https://www.geeksforgeeks.org/types-of-network/)
+- [LAN Network](https://www.webopedia.com/definitions/lan-local-area-network/)
+- [WAN Network](https://www.webopedia.com/definitions/wan-wide-area-network/)
+- [Internet](https://www.britannica.com/technology/Internet)
+- [MAC Address](https://www.lifewire.com/what-is-a-mac-address-2626016)
+- [What is an IP Address](https://www.whatismyip.com/ip-address-lookup/)
+- [Private and Public IP Addresses](https://www.avast.com/c-private-ip-address)
+- [IPv4 and IPv6](https://www.networkworld.com/article/3254575/what-is-ipv6-and-why-is-it-important.html)
+- [Localhost](https://www.hostinger.com/tutorials/what-is-localhost)
+- [TCP and UDP](https://www.comptia.org/content/guides/tcp-vs-udp)
+- [List of TCP/UDP Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+- [What is Ping/ICMP](https://www.techtarget.com/searchnetworking/definition/ping)
+- [Positional Parameters in Shell](https://www.gnu.org/software/bash/manual/html_node/Positional-Parameters.html)
+
 ## Learning Objectives
 
 ### General
 
-* What it is
-* How many layers it has
-* How it is organized
+- Understand the OSI model and its layers
+- Differentiate between various types of networks (LAN, WAN, etc.)
+- Understand the concept of IP addressing and the difference between IPv4 and IPv6
+- Learn about MAC addresses and their role in networking
+- Understand the purpose of localhost and the 127.0.0.1 IP address
+- Learn about TCP and UDP protocols and their differences
+- Understand the use of common networking tools like ping and netcat
+- Learn about positional parameters in shell scripting
+
 ## Tasks
 
-| Task | File |
-| ---- | ---- |
-| 0. OSI model | [0-OSI_model](./0-OSI_model) |
-| 1. Types of network | [1-types_of_network](./1-types_of_network) |
-| 2. MAC and IP address | [2-MAC_and_IP_address](./2-MAC_and_IP_address) |
-| 3. UDP and TCP | [3-UDP_and_TCP](./3-UDP_and_TCP) |
-| 4. TCP and UDP ports | [4-TCP_and_UDP_ports](./4-TCP_and_UDP_ports) |
+| Task                          | File                                                           |
+| ----------------------------- | -------------------------------------------------------------- |
+| 0. OSI model                  | [0-OSI_model](./0-OSI_model)                                   |
+| 1. Types of network           | [1-types_of_network](./1-types_of_network)                     |
+| 2. MAC and IP address         | [2-MAC_and_IP_address](./2-MAC_and_IP_address)                 |
+| 3. UDP and TCP                | [3-UDP_and_TCP](./3-UDP_and_TCP)                               |
+| 4. TCP and UDP ports          | [4-TCP_and_UDP_ports](./4-TCP_and_UDP_ports)                   |
 | 5. Is the host on the network | [5-is_the_host_on_the_network](./5-is_the_host_on_the_network) |
+
+## Additional Notes
+
+- Ensure you have the necessary permissions to execute the scripts.
+- Test the scripts in a safe environment to avoid any unintended changes to your system.
+- Refer to the resources provided for a deeper understanding of each concept and its practical applications.
